@@ -1,0 +1,142 @@
+// Extra small devices (portrait phones, less than 576px
+@media (min-width: 575.5px) {
+	main {
+		margin-top: 92vw;
+	}
+	.main {
+		&__intro {
+			text-align: center;
+		}
+	}
+	.bottom-cta {
+		justify-content: center;
+	}
+}
+
+//Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	main {
+		margin-top: 85vw;
+	}
+}
+
+//Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.hero-image {
+		width: 50%;
+		margin-bottom: 0;
+	}
+	main {
+		margin-top: 9rem;
+	}
+	.main {
+		&__intro {
+			text-align: left;
+		}
+	}
+	.bottom-cta {
+		justify-content: flex-start;
+	}
+}
+
+//Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	:root {
+		font-size: 70%;
+	}
+	.container {
+		padding: 0 8rem;
+	}
+	#burger {
+		display: none;
+	}
+	#nav-items {
+		&-desktop {
+			display: flex;
+			li {
+				font-size: 1.5rem;
+				letter-spacing: 1px;
+				line-height: 1.2;
+				&:not(:last-child) {
+					margin-right: 4.2rem;
+				}
+				&:last-child {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+
+//Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	:root {
+		font-size: 80%;
+	}
+	.container {
+		padding: 0 10rem;
+	}
+}
+@media (min-width: 1440px) {
+	:root {
+		font-size: 62.5%;
+	}
+	header {
+		margin-top: 6.4rem;
+		margin-bottom: 12.4rem;
+	}
+	.bg-shape {
+		width: 48.96vw;
+		min-height: 427px;
+	}
+	.logo {
+		img {
+			max-width: 32px;
+		}
+	}
+	.container {
+		padding: 0 16.5rem;
+		max-width: 1440px;
+	}
+	.main {
+		&__intro {
+			align-items: flex-start;
+			h1 {
+				font-size: 6.4rem;
+				margin-top: 2rem;
+			}
+			h2 {
+				margin-top: 3.2rem;
+				margin-bottom: 6.4rem;
+			}
+		}
+	}
+	.hero {
+		&-image {
+			img {
+				max-width: 130.75%;
+				transform: translateX(40px);
+			}
+		}
+		&-content {
+			margin-top: 3.8rem;
+		}
+	}
+	.btn {
+		&--cta {
+			font-size: 1.6rem;
+			line-height: 1.1785;
+			padding: 1.45rem 3.3375rem;
+		}
+	}
+	.main {
+		&__cta {
+			p {
+				font-size: 1.5rem;
+				letter-spacing: 5px;
+				margin-left: 2.4rem;
+				line-height: 1.2;
+			}
+		}
+	}
+}

@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+:root {
+	/*font*/
+	--condensed: 'Barlow Condensed', sans-serif;
+	--barlow: 'Barlow', sans-serif;
+	/* font size: 1rem = 10px */
+	font-size: 62.5%;
+	/*color palette*/
+	--red: hsl(0, 100%, 68%);
+	--very-dark-blue: hsl(230, 29%, 20%);
+	--dark-grayish-blue: hsl(230, 11%, 40%);
+	--grayish-blue: hsl(231, 7%, 65%);
+	--light-grayish-blue: hsl(207, 33%, 95%);
+}
+/*reset*/
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+body,
+p,
+a,
+ul,
+li,
+h1,
+h2 {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: var(--very-dark-blue);
+}
+li {
+	list-style-type: none;
+}
+/*utilities*/
+.bold {
+	font-weight: 700;
+}
+.regular {
+	font-weight: 400;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.barlow {
+	font-family: var(--barlow);
+}
+.condensed {
+	font-family: var(--condensed);
+}
+.half-opacity {
+	opacity: 0.5;
+}
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	&--cta {
+		background-color: var(--red);
+		color: #ffffff;
+		transition: all 0.3s ease;
+		&:hover {
+			opacity: 0.75;
+			transform: translateY(-2px);
+		}
+	}
+}
+.dot {
+	width: 6px;
+	height: 6px;
+	background-color: var(--very-dark-blue);
+	opacity: 0.15;
+	border-radius: 50%;
+}
+li {
+	&.nav-dot {
+		display: flex;
+		align-items: center;
+		cursor: default;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+/*base styles*/
+ul {
+	li {
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.hero-image {
+	position: absolute;
+	display: flex;
+	overflow-x: hidden;
+	right: 0;
+}
+main {
+	margin-top: 104vw;
+}
+p {
+	&.highlight {
+		color: #ffffff;
+		background-color: var(--very-dark-blue);
+		border-radius: 12.5px;
+		opacity: 1;
+		text-align: center;
+		letter-spacing: 1px;
+		padding: 0.35rem 1.02rem;
+		line-height: 1.2;
+	}
+	&.highlight,
+	&.intro-heading {
+		display: inline-block;
+		font-size: 1.5rem;
+	}
+	&.intro-heading {
+		letter-spacing: 5px;
+		margin-left: 1.6rem;
+	}
+	&.cta {
+		display: inline-block;
+	}
+}
+.bottom-cta {
+	display: flex;
+	align-items: center;
+}
+footer {
+	margin-top: 10rem;
+	margin-bottom: 2rem;
+	a {
+		color: var(--red);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.attribution {
+	text-align: center;
+}
+/* mobile styles */
+header {
+	margin-top: 3.8rem;
+	margin-bottom: 6.4rem;
+	nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+#burger {
+	cursor: pointer;
+}
+.logo {
+	img {
+		max-width: 24px;
+	}
+}
+.background-shape {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50vw;
+	min-width: 187px;
+	min-height: 425px;
+	background-color: var(--light-grayish-blue);
+	border-radius: 0 0 0 60px;
+	z-index: -1;
+}
+.hero-image {
+	img {
+		max-width: 131.87%;
+		transform: translateX(10px);
+	}
+}
+.container {
+	padding: 0 3.2rem;
+	margin: 0 auto;
+}
+#nav {
+	&-items {
+		&-mobile,
+		&-desktop {
+			display: none;
+		}
+		&-mobile {
+			&.show {
+				background-color: #ffffff;
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				left: 50%;
+				margin-top: 25rem;
+				z-index: 1;
+				transform: translate(-50%, 24%);
+				padding: 2.4rem;
+				min-width: 311px;
+				width: 82.9%;
+				box-shadow: 0px 10px 20px 0px rgba(91, 95, 113, 0.6);
+			}
+			li {
+				font-size: 1.8rem;
+				letter-spacing: 1.2px;
+				line-height: 1.22;
+				&:not(:last-child) {
+					margin-bottom: 2.4rem;
+				}
+				&:last-child {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+li {
+	&.divider {
+		height: 1px;
+		background-color: var(--very-dark-blue);
+		opacity: 0.15;
+		width: 100%;
+	}
+}
+.main {
+	&__intro {
+		h1 {
+			font-size: 4rem;
+			line-height: 1;
+		}
+		h2 {
+			opacity: 0.75;
+			line-height: 1.44;
+			font-size: 1.8rem;
+			margin-bottom: 2.7rem;
+		}
+		h1,
+		h2 {
+			margin-top: 1.6rem;
+			letter-spacing: 0;
+		}
+	}
+	&__cta {
+		p {
+			font-size: 1.4rem;
+			line-height: 1.21;
+			letter-spacing: 2.5px;
+			margin-left: 2rem;
+		}
+	}
+}
+.btn {
+	&--cta {
+		padding: 1.15rem 2.2rem;
+		font-size: 1.4rem;
+		letter-spacing: 0.93px;
+		border-radius: 5px;
+	}
+}
